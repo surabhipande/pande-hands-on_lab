@@ -1,0 +1,166 @@
+fileVersion: 1
+id: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+name: STG_ORDERS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Orders data as defined by TPC-H
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4416584-5208-4039-8f99-415439c14771
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: O_ORDERKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9f6df2c8-4e9d-412f-93de-3fb936c8b706
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54092664-8203-4ebf-9d4b-4535ca114d3b
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: O_CUSTKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2cfef22c-a805-455b-9baf-380533d89389
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: edb364bf-a6a3-4ad5-ad5e-2cb9dda5a87f
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: VARCHAR(1)
+        description: ""
+        name: O_ORDERSTATUS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c0c10809-062a-475a-94c2-8e2e6b2538bf
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e324db9-e316-4f60-be67-f6c5bed728e3
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: O_TOTALPRICE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6e02471-a16f-4c60-9633-3b2cf3ae7f11
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e255aa49-df4b-4ef2-988b-8b2e3a84cd78
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: O_ORDERDATE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 297fd4b9-bb9c-4a9b-8632-6a2b17bfd9a9
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 037eaaad-9192-48a4-b4e1-2e69e02c9e18
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: O_ORDERPRIORITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 877afb96-f051-4cce-9759-d4f9a00aa504
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b866003d-10b8-4b5e-aa4f-0151a5588919
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: O_CLERK
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 146f13ba-192e-4c49-ad1e-e494661bcb85
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6477bc96-88e3-4735-b3e7-d1cfcce50871
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: O_SHIPPRIORITY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba2b9c3b-7116-4db1-b4cc-3b6d55b1c0cd
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0bfbab3-2d96-47ab-bb29-f39a07a2a28b
+          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+        config: {}
+        dataType: VARCHAR(79)
+        description: ""
+        name: O_COMMENT
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2260d181-21ee-46e6-a0ca-4f2f5afa4e0d
+                stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ORDERS: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: ORDERS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
+        name: STG_ORDERS
+        noLinkRefs: []
+  name: STG_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
