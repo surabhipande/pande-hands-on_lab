@@ -3,8 +3,8 @@ id: 6454c265-33c1-473b-a903-91d06598c748
 name: DIM_SUPPLIER
 operation:
   config:
-    postSQL: ""
-    preSQL: ""
+    postSQL: UPDATE {{ ref_no_link(node.location.name, node.name) }} SET S_SUPPKEY = 16 WHERE S_SUPPKEY = 9999999;
+    preSQL: UPDATE {{ ref_no_link(node.location.name, node.name) }} SET S_SUPPKEY = 9999999 WHERE S_SUPPKEY = 16;
     testsEnabled: true
   database: ""
   deployEnabled: true
@@ -40,6 +40,7 @@ operation:
         dataType: NUMBER(38,0)
         description: ""
         isBusinessKey: true
+        isChangeTracking: true
         name: S_SUPPKEY
         nullable: false
         sourceColumnReferences:

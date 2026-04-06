@@ -142,7 +142,7 @@ operation:
           - columnReferences:
               - columnCounter: b0bfbab3-2d96-47ab-bb29-f39a07a2a28b
                 stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
-            transform: ""
+            transform: UPPER("STG_ORDERS"."O_COMMENT")
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

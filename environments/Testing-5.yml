@@ -7,5 +7,5 @@ mappingDefinitions:
   WORK:
     database: PANDE
     schema: WORKTEST
-name: New Environment
+name: Testing
 type: Environment
