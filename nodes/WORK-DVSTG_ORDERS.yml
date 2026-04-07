@@ -1,26 +1,23 @@
 fileVersion: 1
-id: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
-name: STG_ORDERS
+id: 4f50127f-6665-4655-a6eb-ef961f382143
+name: DVSTG_ORDERS
 operation:
   config:
-    insertStrategy: INSERT
-    postSQL: ""
-    preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
+    contains_multiactive_data: false
+    generate_ghost_records: true
   database: ""
   deployEnabled: true
   description: Orders data as defined by TPC-H
   isMultisource: false
   locationName: WORK
-  materializationType: table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a4416584-5208-4039-8f99-415439c14771
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: 60b14fe2-bdc2-45b0-b68b-6714c7bdd9b8
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +30,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 54092664-8203-4ebf-9d4b-4535ca114d3b
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: 43ca3979-5d7b-488f-af9c-cf1f68f63407
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -47,8 +44,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: edb364bf-a6a3-4ad5-ad5e-2cb9dda5a87f
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: 67598eac-7aa8-49a2-8b3d-02e452d617ac
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: VARCHAR(1)
         description: ""
@@ -61,8 +58,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 7e324db9-e316-4f60-be67-f6c5bed728e3
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: fa15a9a4-7296-4b3c-b33f-264d226fb82d
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: NUMBER(12,2)
         description: ""
@@ -75,8 +72,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e255aa49-df4b-4ef2-988b-8b2e3a84cd78
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: 5a1a30cb-5a77-417e-97d3-29efc17127db
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: DATE
         description: ""
@@ -89,8 +86,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 037eaaad-9192-48a4-b4e1-2e69e02c9e18
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: ca7adfef-4df8-4057-bd18-5f8dce8e59d2
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: VARCHAR(15)
         description: ""
@@ -103,8 +100,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b866003d-10b8-4b5e-aa4f-0151a5588919
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: f754df1f-91ae-475c-a9de-8ccfb3b9eb9a
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: VARCHAR(15)
         description: ""
@@ -117,8 +114,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6477bc96-88e3-4735-b3e7-d1cfcce50871
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: 7b9268dc-53d9-4a24-bf73-566432ac832c
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -131,8 +128,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: b0bfbab3-2d96-47ab-bb29-f39a07a2a28b
-          stepCounter: 7ed9e6fb-9c8c-4b77-9a35-21d58b15320d
+          columnCounter: 4212a72b-d164-4ea1-a584-0418a8c92313
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
         config: {}
         dataType: VARCHAR(79)
         description: ""
@@ -143,6 +140,40 @@ operation:
               - columnCounter: 2260d181-21ee-46e6-a0ca-4f2f5afa4e0d
                 stepCounter: e7f93ab1-9b37-4d3d-aead-ca43aafe18e8
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6e23e0c-32e5-4dce-9c8b-7023722d1341
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 331cdad9-34f7-4b21-b3a7-1583698e5537
+          stepCounter: 4f50127f-6665-4655-a6eb-ef961f382143
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -155,12 +186,12 @@ operation:
             nodeName: ORDERS
         join:
           joinCondition: FROM {{ ref('SRC', 'ORDERS') }} "ORDERS"
-        name: STG_ORDERS
+        name: DVSTG_ORDERS
         noLinkRefs: []
-  name: STG_ORDERS
+  name: DVSTG_ORDERS
   overrideSQL: false
   schema: ""
-  sqlType: Stage
+  sqlType: DataVault1:::4
   type: sql
   version: 1
 type: Node

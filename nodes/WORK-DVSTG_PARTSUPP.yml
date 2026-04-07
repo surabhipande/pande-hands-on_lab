@@ -1,26 +1,23 @@
 fileVersion: 1
-id: 3a1bd4aa-80bc-42af-b567-adc7ac8a3866
-name: STG_PARTSUPP
+id: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
+name: DVSTG_PARTSUPP
 operation:
   config:
-    insertStrategy: INSERT
-    postSQL: ""
-    preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
+    contains_multiactive_data: false
+    generate_ghost_records: true
   database: ""
   deployEnabled: true
   description: Partsupp data as defined by TPC-H
   isMultisource: false
   locationName: WORK
-  materializationType: table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bc43d6c1-00eb-41fe-a859-ede5e04281a3
-          stepCounter: 3a1bd4aa-80bc-42af-b567-adc7ac8a3866
+          columnCounter: 8b907eb7-c03f-46b5-a29b-f69537136f61
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +30,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a8913a9f-f363-487b-8def-51f10952d886
-          stepCounter: 3a1bd4aa-80bc-42af-b567-adc7ac8a3866
+          columnCounter: fb689f55-f469-46a1-b1f3-c203bb3c6649
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -47,8 +44,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3d03beb2-59c7-4e1e-a611-b5c2cbcc6561
-          stepCounter: 3a1bd4aa-80bc-42af-b567-adc7ac8a3866
+          columnCounter: ff71a8a2-0636-463e-9dc4-24a68c2e99d6
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -61,8 +58,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1c606058-eef7-4c3f-bc90-96e88cf137a6
-          stepCounter: 3a1bd4aa-80bc-42af-b567-adc7ac8a3866
+          columnCounter: 162a19e8-1c82-4d40-a53a-74df7e027093
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
         config: {}
         dataType: NUMBER(12,2)
         description: ""
@@ -75,8 +72,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 952f9511-b176-4081-84fa-49129c96ed44
-          stepCounter: 3a1bd4aa-80bc-42af-b567-adc7ac8a3866
+          columnCounter: 971fc93e-93cb-46a1-9b82-2b539c32c084
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
         config: {}
         dataType: VARCHAR(199)
         description: ""
@@ -87,6 +84,40 @@ operation:
               - columnCounter: 237eb344-938d-4f59-8407-9d8a5f84b035
                 stepCounter: 311dfbb6-c571-40a5-8042-68914485ad92
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd3a228f-bf36-42c0-8357-93832d97355d
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2d3386a-e625-4bc4-981b-6cc58a803361
+          stepCounter: 4684fbdc-4e85-4799-b0f4-b82e47cb1058
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -99,12 +130,12 @@ operation:
             nodeName: PARTSUPP
         join:
           joinCondition: FROM {{ ref('SRC', 'PARTSUPP') }} "PARTSUPP"
-        name: STG_PARTSUPP
+        name: DVSTG_PARTSUPP
         noLinkRefs: []
-  name: STG_PARTSUPP
+  name: DVSTG_PARTSUPP
   overrideSQL: false
   schema: ""
-  sqlType: Stage
+  sqlType: DataVault1:::4
   type: sql
   version: 1
 type: Node

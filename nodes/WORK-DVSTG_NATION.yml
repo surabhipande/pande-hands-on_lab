@@ -1,26 +1,23 @@
 fileVersion: 1
-id: bd2300e1-35df-4e58-88b5-ee57eae9d793
-name: STG_NATION1
+id: 2b0286ca-2256-4b84-8298-15a8929940bc
+name: DVSTG_NATION
 operation:
   config:
-    insertStrategy: INSERT
-    postSQL: ""
-    preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
+    contains_multiactive_data: false
+    generate_ghost_records: true
   database: ""
   deployEnabled: true
   description: Nation data as defined by TPC-H
   isMultisource: false
   locationName: WORK
-  materializationType: table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d0560ecf-9bf8-4ada-82b7-98f991ed1988
-          stepCounter: bd2300e1-35df-4e58-88b5-ee57eae9d793
+          columnCounter: 42c91cd3-c3a7-4caa-aab6-a6e849211f37
+          stepCounter: 2b0286ca-2256-4b84-8298-15a8929940bc
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +30,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 112832d2-c98c-4e1a-b20a-caf0012a3ad4
-          stepCounter: bd2300e1-35df-4e58-88b5-ee57eae9d793
+          columnCounter: 92a062b8-f066-4531-8f07-eeb105858939
+          stepCounter: 2b0286ca-2256-4b84-8298-15a8929940bc
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -47,8 +44,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 11d4c4e4-e520-402c-9382-fb63a3108238
-          stepCounter: bd2300e1-35df-4e58-88b5-ee57eae9d793
+          columnCounter: 72257e55-4a6e-4a5d-9e3f-20a9151bdc1e
+          stepCounter: 2b0286ca-2256-4b84-8298-15a8929940bc
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -61,8 +58,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 9c55c239-696d-480e-9e15-53242828f0bd
-          stepCounter: bd2300e1-35df-4e58-88b5-ee57eae9d793
+          columnCounter: eecc9d33-1a38-4ca2-bd1e-559b877a22fe
+          stepCounter: 2b0286ca-2256-4b84-8298-15a8929940bc
         config: {}
         dataType: VARCHAR(152)
         description: ""
@@ -73,6 +70,40 @@ operation:
               - columnCounter: fb1d51f8-c616-4869-b7a8-0a8539877d63
                 stepCounter: 050528a6-0479-4cbd-a4b1-729155df9f50
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d759f52-ee23-411f-89d7-d7979bd0fff0
+          stepCounter: 2b0286ca-2256-4b84-8298-15a8929940bc
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7be15711-15ca-4443-9700-299b770a35c1
+          stepCounter: 2b0286ca-2256-4b84-8298-15a8929940bc
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -85,12 +116,12 @@ operation:
             nodeName: NATION
         join:
           joinCondition: FROM {{ ref('SRC', 'NATION') }} "NATION"
-        name: STG_NATION1
+        name: DVSTG_NATION
         noLinkRefs: []
-  name: STG_NATION1
+  name: DVSTG_NATION
   overrideSQL: false
   schema: ""
-  sqlType: Stage
+  sqlType: DataVault1:::4
   type: sql
   version: 1
 type: Node

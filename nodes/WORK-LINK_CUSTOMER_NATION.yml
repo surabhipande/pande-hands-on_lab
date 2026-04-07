@@ -1,0 +1,110 @@
+fileVersion: 1
+id: d4c3345f-42e5-4654-b659-12f8512a9fd8
+name: LINK_CUSTOMER_NATION
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: Customer data as defined by TPC-H
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ef1086f-1694-4fbc-98e6-69c1517de6ed
+          stepCounter: d4c3345f-42e5-4654-b659-12f8512a9fd8
+        config: {}
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMER_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 290a0877-ecc0-4663-b98e-d813e0509704
+                stepCounter: e618dde4-d33c-4836-83f9-fe65772a6106
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf7f94ab-3058-4204-91df-d3386bb913a8
+          stepCounter: d4c3345f-42e5-4654-b659-12f8512a9fd8
+        config: {}
+        dataType: STRING
+        description: ""
+        name: HK_NATION_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4903754c-5689-4b57-80bf-f2077d6d2aba
+                stepCounter: e618dde4-d33c-4836-83f9-fe65772a6106
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92114b90-66af-4857-911c-e2646daff07d
+          stepCounter: d4c3345f-42e5-4654-b659-12f8512a9fd8
+        config:
+          is_Link_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMER_NATION_L
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f0ed9c67-73bf-49d4-bdb1-a409c1839411
+                stepCounter: e618dde4-d33c-4836-83f9-fe65772a6106
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd63bd14-ada4-4750-9e0c-4fd14e290d49
+          stepCounter: d4c3345f-42e5-4654-b659-12f8512a9fd8
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3a135fe-6280-432f-99dc-98cdae9a8b91
+                stepCounter: e618dde4-d33c-4836-83f9-fe65772a6106
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3755766d-1573-4dce-a408-8b171452d7dc
+          stepCounter: d4c3345f-42e5-4654-b659-12f8512a9fd8
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c8457ac0-74b8-44d3-9b4c-96350e458330
+                stepCounter: e618dde4-d33c-4836-83f9-fe65772a6106
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_CUSTOMER: e618dde4-d33c-4836-83f9-fe65772a6106
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: DVSTG_CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('WORK', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+        name: LINK_CUSTOMER_NATION
+        noLinkRefs: []
+  name: LINK_CUSTOMER_NATION
+  overrideSQL: false
+  schema: ""
+  sqlType: DataVault1:::7
+  type: sql
+  version: 1
+type: Node

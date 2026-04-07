@@ -1,26 +1,23 @@
 fileVersion: 1
-id: 938665bd-cb04-4045-84a8-0f55d96b35e8
-name: STG_PART
+id: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
+name: DVSTG_PART
 operation:
   config:
-    insertStrategy: INSERT
-    postSQL: ""
-    preSQL: ""
-    testsEnabled: true
-    truncateBefore: true
+    contains_multiactive_data: false
+    generate_ghost_records: true
   database: ""
   deployEnabled: true
   description: Part data as defined by TPC-H
   isMultisource: false
   locationName: WORK
-  materializationType: table
+  materializationType: view
   metadata:
     appliedNodeTests: []
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d7949bfc-422f-4025-a01f-a6705414bd73
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 212a9878-44fd-40cf-945d-0486427d52dc
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -33,8 +30,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 4afd6444-550d-41d6-94a8-77fd3a8b2137
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 3954a2d0-d5ad-4e14-aabd-26edc603f104
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: VARCHAR(55)
         description: ""
@@ -47,8 +44,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: fb60f631-b267-4013-8223-7752c7a8ca58
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 6e34a9cb-2fc1-42e9-834c-76a50db24386
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -61,8 +58,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 11167563-b34e-4567-890f-e1048063c6fa
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: a76981b1-8ec2-4f89-85df-91ae400231f4
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: VARCHAR(10)
         description: ""
@@ -75,8 +72,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: faa1a258-502a-41c7-b246-4314399e6dec
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 2801cd00-680e-4314-b25e-b8b502b02a0a
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -89,8 +86,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f8d4228f-6526-4b41-b40b-1dffff6bea68
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 86ab7d09-9924-44a1-8ce6-8f7537e68311
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -103,8 +100,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6153f7eb-45af-41b3-ae4f-aa8eae964fda
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 6a195d16-d714-403f-8751-44bbbc2d6244
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: VARCHAR(10)
         description: ""
@@ -117,8 +114,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 14572cd2-851b-498c-b65b-7c7292cf0230
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: c857e90c-8bd1-460e-ae11-de334300c93b
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: NUMBER(12,2)
         description: ""
@@ -131,8 +128,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a9162a71-1254-41e2-a915-ee3f96dcd091
-          stepCounter: 938665bd-cb04-4045-84a8-0f55d96b35e8
+          columnCounter: 87ac470f-c26b-4864-83a5-ee2354a7f9c6
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
         config: {}
         dataType: VARCHAR(23)
         description: ""
@@ -143,6 +140,40 @@ operation:
               - columnCounter: 24f0b35a-bad7-4e83-8e3d-2d065bf4ae3e
                 stepCounter: da3010a6-a2ba-4b2c-80ed-00a2576c8074
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d43e244-3561-488a-8df0-652efe74d854
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        is_system_ldts: true
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: SYSDATE()
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8983b221-76e0-4d8e-9d97-15a7b72344e5
+          stepCounter: 8a96a0d0-60c1-4f8b-a99c-1567cb235680
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: The Record Source (RSRC) describes the source of this data.
+        is_system_rsrc: true
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "{{record_source()}}"
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
@@ -155,12 +186,12 @@ operation:
             nodeName: PART
         join:
           joinCondition: FROM {{ ref('SRC', 'PART') }} "PART"
-        name: STG_PART
+        name: DVSTG_PART
         noLinkRefs: []
-  name: STG_PART
+  name: DVSTG_PART
   overrideSQL: false
   schema: ""
-  sqlType: Stage
+  sqlType: DataVault1:::4
   type: sql
   version: 1
 type: Node
