@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 0dc9731d-bd0e-4147-aef0-1bf3a76d0bde
+name: STG_SOURCE_STORES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1417898b-1e4b-43d2-9855-3a53068b654c
+          stepCounter: 0dc9731d-bd0e-4147-aef0-1bf3a76d0bde
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca8aad9d-3784-4a8a-aba6-2bc41b49f559
+                stepCounter: 07b3c74f-5e8c-4756-b16b-a77d198fb783
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2995907-1405-4d53-9f2f-31b68faf30dc
+          stepCounter: 0dc9731d-bd0e-4147-aef0-1bf3a76d0bde
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: STORE_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa0f7c6d-4ac5-42c3-80f5-46c5135e7391
+                stepCounter: 07b3c74f-5e8c-4756-b16b-a77d198fb783
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37af4e6a-34b8-4d87-ab61-29b1916a25df
+          stepCounter: 0dc9731d-bd0e-4147-aef0-1bf3a76d0bde
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 331afa37-0417-4b20-8c16-110329284b61
+                stepCounter: 07b3c74f-5e8c-4756-b16b-a77d198fb783
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b6ae4de-a564-4527-bbac-eb2d2b9057e5
+          stepCounter: 0dc9731d-bd0e-4147-aef0-1bf3a76d0bde
+        config: {}
+        dataType: DATE
+        description: ""
+        name: OPEN_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 358e9c14-0991-4304-8563-07a49c279b60
+                stepCounter: 07b3c74f-5e8c-4756-b16b-a77d198fb783
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SOURCE_STORES: 07b3c74f-5e8c-4756-b16b-a77d198fb783
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SOURCE_STORES
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SOURCE_STORES') }} "SOURCE_STORES"
+        name: STG_SOURCE_STORES
+        noLinkRefs: []
+  name: STG_SOURCE_STORES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

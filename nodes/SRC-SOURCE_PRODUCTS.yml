@@ -1,10 +1,10 @@
 fileVersion: 1
-id: 050528a6-0479-4cbd-a4b1-729155df9f50
-name: NATION
+id: ec449bde-8aa4-4056-a013-42d6756d9509
+name: SOURCE_PRODUCTS
 operation:
   database: ""
   deployEnabled: true
-  description: Nation data as defined by TPC-H
+  description: ""
   locationName: SRC
   metadata:
     columns:
@@ -13,70 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 23a09373-c4e1-4922-9af2-bcff549e0fff
-          stepCounter: 050528a6-0479-4cbd-a4b1-729155df9f50
+          columnCounter: 85525732-d6f1-47a1-b6b2-76be3e593e9f
+          stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
         description: ""
-        name: N_NATIONKEY
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 6292ec76-ef86-4378-96c6-56481f306629
-          stepCounter: 050528a6-0479-4cbd-a4b1-729155df9f50
-        config: {}
-        dataType: VARCHAR(25)
-        defaultValue: ""
-        description: ""
-        name: N_NAME
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 8e755813-c451-4113-a56f-778916f263e5
-          stepCounter: 050528a6-0479-4cbd-a4b1-729155df9f50
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: N_REGIONKEY
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: fb1d51f8-c616-4869-b7a8-0a8539877d63
-          stepCounter: 050528a6-0479-4cbd-a4b1-729155df9f50
-        config: {}
-        dataType: VARCHAR(152)
-        defaultValue: ""
-        description: ""
-        name: N_COMMENT
+        name: PRODUCT_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -84,7 +27,83 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: NATION
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01b8ba76-4d31-4b1f-856e-b480dabb9b6c
+          stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PRODUCT_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f32a7a7b-9dda-4145-99be-0b62bbcb05ba
+          stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CATEGORY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cffefb51-3346-42b3-87d5-f939c1bc7397
+          stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: BASE_PRICE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e82f2ce-c2a9-404a-8441-78c8aba21f2b
+          stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SOURCE_PRODUCTS
   schema: ""
   sqlType: Source
   type: sourceInput

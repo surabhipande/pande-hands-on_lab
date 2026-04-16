@@ -1,0 +1,179 @@
+fileVersion: 1
+id: 7574a375-c8a9-455a-8148-1a727ed54059
+name: FCT_ENRICHED_FINAL
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a49488a7-9322-4924-ba1e-e7139390303e
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: PRODUCT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 17acaacf-c1d0-4179-88ab-a200122456f9
+                stepCounter: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 62e19bfd-5461-41bf-ab27-a96024e4a0a8
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        isBusinessKey: true
+        name: STORE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 92098926-6f3a-4695-9c20-f5d318b9aafb
+                stepCounter: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cbdb2992-d6ed-4c6c-960a-c6fe9fc88686
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: BASE_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c5c5189b-3d29-47f7-b5f4-cee56dc1a635
+                stepCounter: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 533f872e-3430-46eb-b73c-7405810f5606
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a4d1866-3d11-4abf-9b8e-85ed17f73e1c
+                stepCounter: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 05377fff-62a6-4468-bea1-7bc8d4bc7750
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: GROSS_REVENUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 59470d16-d216-4f36-8fd3-fe7ceb8990c1
+                stepCounter: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f2f22ae-caf4-4a12-b199-7328c7a1d809
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: NET_REVENUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78c12a07-b498-4552-a99f-120b8480a7cf
+                stepCounter: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e28b1345-16ae-4f8f-a80a-0a886b5765fc
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: AVERAGE_UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ENRICHED_FINAL.NET_REVENUE / NULLIF(ENRICHED_FINAL.QUANTITY, 0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e261bf52-7233-46f5-8cbd-74d5c19246de
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24444365-b2eb-461c-9b68-518708bb41dc
+          stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ENRICHED_FINAL: 674e9b02-0821-4f27-a400-2d26ffdaa97a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: ENRICHED_FINAL
+        join:
+          joinCondition: |
+            FROM {{ ref('WORK', 'ENRICHED_FINAL') }} "ENRICHED_FINAL"
+        name: FCT_ENRICHED_FINAL
+        noLinkRefs: []
+  name: FCT_ENRICHED_FINAL
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "16"
+mappingDefinitions:
+  SRC:
+    database: RETAIL_ANALYTICS
+    schema: RETAIL_ANALYTICS
+  WORK:
+    database: RETAIL_ANALYTICS
+    schema: PUBLIC
+name: RETAIL_ANALYTICS_PIPELINE
+type: Environment

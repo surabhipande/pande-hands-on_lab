@@ -1,10 +1,10 @@
 fileVersion: 1
-id: 098bd85a-7958-4356-99f8-176ce4a7c62e
-name: SUPPLIER
+id: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+name: SOURCE_SALES
 operation:
   database: ""
   deployEnabled: true
-  description: Supplier data as defined by TPC-H
+  description: ""
   locationName: SRC
   metadata:
     columns:
@@ -13,127 +13,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 99bda0f7-252c-4c68-8ccf-c8a57a61761e
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
+          columnCounter: 09b28970-f839-4ce4-bc30-c5a2b5ad4be8
+          stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
         config: {}
-        dataType: NUMBER(38,0)
+        dataType: VARCHAR(16777216)
         defaultValue: ""
         description: ""
-        name: S_SUPPKEY
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1bfc36e4-a2b8-4a03-9baf-1cddad24c5fb
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
-        config: {}
-        dataType: VARCHAR(25)
-        defaultValue: ""
-        description: ""
-        name: S_NAME
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: b3aa43f0-1ad3-4e47-aa5b-a8fac2e941d9
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
-        config: {}
-        dataType: VARCHAR(40)
-        defaultValue: ""
-        description: ""
-        name: S_ADDRESS
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 9b6e3096-87d9-42ca-a1f6-2db0e668940a
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
-        config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: ""
-        name: S_NATIONKEY
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 1944bd53-d223-42bd-baf1-e09168d3a736
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
-        config: {}
-        dataType: VARCHAR(15)
-        defaultValue: ""
-        description: ""
-        name: S_PHONE
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: e97c37a2-1aa2-4765-9345-a0a5ea835dc7
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
-        config: {}
-        dataType: NUMBER(12,2)
-        defaultValue: ""
-        description: ""
-        name: S_ACCTBAL
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 584b56f0-519f-4622-9168-ce1af6b54d40
-          stepCounter: 098bd85a-7958-4356-99f8-176ce4a7c62e
-        config: {}
-        dataType: VARCHAR(101)
-        defaultValue: ""
-        description: ""
-        name: S_COMMENT
+        name: TRANSACTION_ID
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -141,7 +27,102 @@ operation:
             transform: ""
         transform: ""
         uniqueKey: false
-  name: SUPPLIER
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69b312b1-0b6a-4756-9c00-940108f4ca84
+          stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: STORE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5a7fe4e-b98f-4967-b93d-a17721d8a844
+          stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PRODUCT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 443829c8-f449-4824-904a-0a79db06dbf7
+          stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: SALE_TIMESTAMP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ba1d412-8566-4a3f-a4d2-0bf0f2f4c2a7
+          stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b78adf86-411e-4787-9fb8-e6b2c1e9db0c
+          stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: DISCOUNT_AMOUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SOURCE_SALES
   schema: ""
   sqlType: Source
   type: sourceInput

@@ -1,0 +1,169 @@
+fileVersion: 1
+id: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+name: V_ENRICHED_FINAL
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39b2c535-1d72-441f-a5ec-e0edfe6c1068
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRODUCT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a49488a7-9322-4924-ba1e-e7139390303e
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1612b630-3bb5-4d70-b727-f1274d9210ca
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62e19bfd-5461-41bf-ab27-a96024e4a0a8
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83f8ce31-201d-4562-9652-d0038e103c04
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: BASE_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cbdb2992-d6ed-4c6c-960a-c6fe9fc88686
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1672dec-3d84-4660-ae55-cb74e5e3db9a
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 533f872e-3430-46eb-b73c-7405810f5606
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e1f988e-18db-4a5e-81a7-14bf29d6b9e4
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: GROSS_REVENUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 05377fff-62a6-4468-bea1-7bc8d4bc7750
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11d052ab-8d9f-4459-9f21-dd2dbf92f8b4
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: NET_REVENUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f2f22ae-caf4-4a12-b199-7328c7a1d809
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfc73aae-2b65-4b83-8912-b0d9a115520b
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: AVERAGE_UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e28b1345-16ae-4f8f-a80a-0a886b5765fc
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d81149ff-0988-4928-aba8-00f44039a902
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e261bf52-7233-46f5-8cbd-74d5c19246de
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ceb7140-4984-4180-851e-ded0869ddd2b
+          stepCounter: 3268412f-550b-46c6-80d2-8b1a0d1fa8d7
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24444365-b2eb-461c-9b68-518708bb41dc
+                stepCounter: 7574a375-c8a9-455a-8148-1a727ed54059
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DIM_ENRICHED_FINAL: e85f67a9-0fa0-48d3-8b57-90fea40b737a
+          FCT_ENRICHED_FINAL: 7574a375-c8a9-455a-8148-1a727ed54059
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: DIM_ENRICHED_FINAL
+          - locationName: WORK
+            nodeName: FCT_ENRICHED_FINAL
+        join:
+          joinCondition: |-
+            FROM {{ ref('WORK', 'FCT_ENRICHED_FINAL') }} "FCT_ENRICHED_FINAL"
+            JOIN {{ ref('WORK', 'DIM_ENRICHED_FINAL') }} "DIM_ENRICHED_FINAL"
+            ON "FCT_ENRICHED_FINAL"."PRODUCT_ID"="DIM_ENRICHED_FINAL"."PRODUCT_ID"
+        name: V_ENRICHED_FINAL
+        noLinkRefs: []
+  name: V_ENRICHED_FINAL
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

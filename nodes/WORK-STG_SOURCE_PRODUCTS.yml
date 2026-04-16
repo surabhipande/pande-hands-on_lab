@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 0a8e7759-42c5-4d1b-9f53-babddeba1dd9
+name: STG_SOURCE_PRODUCTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a89281ff-5b63-4969-95b3-e76cb0eb9309
+          stepCounter: 0a8e7759-42c5-4d1b-9f53-babddeba1dd9
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRODUCT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85525732-d6f1-47a1-b6b2-76be3e593e9f
+                stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6c8fe91-4010-4f94-8453-069c7463a421
+          stepCounter: 0a8e7759-42c5-4d1b-9f53-babddeba1dd9
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRODUCT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 01b8ba76-4d31-4b1f-856e-b480dabb9b6c
+                stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6aae10c7-0c5e-4203-9257-47683198865d
+          stepCounter: 0a8e7759-42c5-4d1b-9f53-babddeba1dd9
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f32a7a7b-9dda-4145-99be-0b62bbcb05ba
+                stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55690cd9-4847-44d5-a2a7-146d1a012de5
+          stepCounter: 0a8e7759-42c5-4d1b-9f53-babddeba1dd9
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: BASE_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cffefb51-3346-42b3-87d5-f939c1bc7397
+                stepCounter: ec449bde-8aa4-4056-a013-42d6756d9509
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SOURCE_PRODUCTS: ec449bde-8aa4-4056-a013-42d6756d9509
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SOURCE_PRODUCTS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SOURCE_PRODUCTS') }} "SOURCE_PRODUCTS"
+        name: STG_SOURCE_PRODUCTS
+        noLinkRefs: []
+  name: STG_SOURCE_PRODUCTS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

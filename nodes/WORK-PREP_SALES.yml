@@ -1,0 +1,164 @@
+fileVersion: 1
+id: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+name: PREP_SALES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a9847d7-79b7-461f-8dd3-41c0ef343ca8
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: TRANSACTION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09b28970-f839-4ce4-bc30-c5a2b5ad4be8
+                stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0333ff5b-b167-4190-b0ed-06fefab07076
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STORE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 69b312b1-0b6a-4756-9c00-940108f4ca84
+                stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54606d8a-a8b2-4156-ac13-04459a4b5539
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRODUCT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e5a7fe4e-b98f-4967-b93d-a17721d8a844
+                stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 561f3668-d8b9-4464-8d8d-772f203664be
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: SALE_TIMESTAMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 443829c8-f449-4824-904a-0a79db06dbf7
+                stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39e76b4e-2248-4973-b41a-d7792657a18b
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1ba1d412-8566-4a3f-a4d2-0bf0f2f4c2a7
+                stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 010b70a9-ed64-48cd-a4f0-3db55aa1051e
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: DISCOUNT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b78adf86-411e-4787-9fb8-e6b2c1e9db0c
+                stepCounter: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+            transform: "COALESCE(DISCOUNT_AMOUNT, 0) "
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2584f515-acdb-49d9-a4dd-336102871a00
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SALE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "DATE(SALE_TIMESTAMP) "
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe1889ce-c4fc-4425-b990-e7827fce0f7e
+          stepCounter: 33ec3b6a-d03e-4939-883c-d4ee92f7ae47
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: SALE_MONTH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "EXTRACT(MONTH FROM SALE_TIMESTAMP) "
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SOURCE_SALES: 8e15687f-5b01-4b4f-8b00-b3529bcf4245
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SOURCE_SALES
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SOURCE_SALES') }} "SOURCE_SALES"
+        name: PREP_SALES
+        noLinkRefs: []
+  name: PREP_SALES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
