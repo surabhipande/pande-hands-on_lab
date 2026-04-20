@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "21"
+mappingDefinitions:
+  EDW_DEV:
+    database: ""
+    schema: ""
+  EDW_DEV_PRO:
+    database: ""
+    schema: ""
+name: New Environment
+type: Environment

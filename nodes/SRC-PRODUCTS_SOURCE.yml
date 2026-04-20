@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+name: PRODUCTS_SOURCE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0581c6a-c047-4591-abad-ab2cd0029744
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PRODUCT_ID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80350075-2a38-4307-85f4-4eecb2ed9d82
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        name: PRODUCT_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43b31130-af5b-4510-a514-593345cbe382
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: CATEGORY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 702d4202-1865-4f1e-a1a1-1343356ecd5d
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: PRICE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd9b3ed8-26d4-45ea-8c5e-e3dedfe3f6ad
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: STOCK_LEVEL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f500c40e-91bc-473a-89d7-ab1502983e82
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b9bc27e3-5e46-4702-98d2-2a2728d6d83c
+          stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SUPPLIER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: PRODUCTS_SOURCE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

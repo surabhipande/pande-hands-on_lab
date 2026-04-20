@@ -1,0 +1,139 @@
+fileVersion: 1
+id: d07b4fae-de71-4f15-939f-828f7e323d7a
+name: STG_SUPPLIERS_SOURCE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: EDW_DEV_PRO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df61e7ef-2492-481f-baa0-3b05fc6176df
+          stepCounter: d07b4fae-de71-4f15-939f-828f7e323d7a
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SUPPLIER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ae3c64e-323a-4207-ab06-2b5c8b5cbfe1
+                stepCounter: fc6a353a-4a4c-4393-a69d-222f4e8aa21d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d6daa40-b26c-43ab-81e1-108f39730b12
+          stepCounter: d07b4fae-de71-4f15-939f-828f7e323d7a
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: SUPPLIER_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1fa4edf-d39f-4bbb-a364-3ad09bd2331f
+                stepCounter: fc6a353a-4a4c-4393-a69d-222f4e8aa21d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 897874a6-d44f-444f-aceb-59e772737696
+          stepCounter: d07b4fae-de71-4f15-939f-828f7e323d7a
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95ed377f-5740-4069-9a16-3e920287d2a8
+                stepCounter: fc6a353a-4a4c-4393-a69d-222f4e8aa21d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35b94f62-becf-4abe-9eeb-1bd2c975b2a8
+          stepCounter: d07b4fae-de71-4f15-939f-828f7e323d7a
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80cf362b-9c8f-44e4-b276-fa3b72162c7f
+                stepCounter: fc6a353a-4a4c-4393-a69d-222f4e8aa21d
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3a6f298-9703-4c37-9499-a9798c162ef7
+          stepCounter: d07b4fae-de71-4f15-939f-828f7e323d7a
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: supplier_name_std
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "UPPER(supplier_name) "
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ec6551f-7233-46c0-aa26-8e45ed799454
+          stepCounter: d07b4fae-de71-4f15-939f-828f7e323d7a
+        config: {}
+        dataType: VARCHAR(80)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: supplier_location
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "CONCAT(city, ', ', country) "
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SUPPLIERS_SOURCE: fc6a353a-4a4c-4393-a69d-222f4e8aa21d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SUPPLIERS_SOURCE
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'SUPPLIERS_SOURCE') }} "SUPPLIERS_SOURCE"
+                WHERE
+                    COUNTRY IS NOT NULL
+        name: STG_SUPPLIERS_SOURCE
+        noLinkRefs: []
+  name: STG_SUPPLIERS_SOURCE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

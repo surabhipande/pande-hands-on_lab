@@ -1,0 +1,8 @@
+fileVersion: 1
+id: "1"
+macroString: |-
+  {% macro customer_name(column_name) %} 
+      UPPER(TRIM({{ column_name }}))
+  {% endmacro %}
+name: macro
+type: Macro

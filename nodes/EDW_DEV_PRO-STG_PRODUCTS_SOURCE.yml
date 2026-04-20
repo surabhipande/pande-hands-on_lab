@@ -1,0 +1,200 @@
+fileVersion: 1
+id: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+name: STG_PRODUCTS_SOURCE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: EDW_DEV_PRO
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f879ce54-465e-44f0-9821-3abbd93d365f
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRODUCT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b0581c6a-c047-4591-abad-ab2cd0029744
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6bd4f5f-9cbe-453e-915e-20d908afdfa9
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: VARCHAR(255)
+        description: ""
+        name: PRODUCT_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80350075-2a38-4307-85f4-4eecb2ed9d82
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 850836a6-3dbc-4b52-a019-84001a0e0451
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: VARCHAR(60)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: product_name_std
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "UPPER(product_name) "
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: da2d419d-3de8-44ed-aa4c-3f4e48de1613
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 43b31130-af5b-4510-a514-593345cbe382
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b9b8add5-2950-423a-92da-60d965f0f21f
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: PRICE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 702d4202-1865-4f1e-a1a1-1343356ecd5d
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c7de16b-d430-4398-b721-29f7bfb47c40
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: STOCK_LEVEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dd9b3ed8-26d4-45ea-8c5e-e3dedfe3f6ad
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 597c0202-8acc-46b4-a28e-522a71a358b8
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: inventory_value
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "(price * stock_level) "
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5afe0b88-485a-4d8e-a406-bd72e1791789
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f500c40e-91bc-473a-89d7-ab1502983e82
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36b6b5fb-1b17-4114-a3b5-15edb9577182
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SUPPLIER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b9bc27e3-5e46-4702-98d2-2a2728d6d83c
+                stepCounter: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d5d985f-1a87-4183-98c3-a364f547bde3
+          stepCounter: 5cdbdf2b-396a-4f9e-ba2d-5916c361b9e5
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: load_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: current_date()
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PRODUCTS_SOURCE: 61baaa79-0400-410d-adc5-1cfc77ce7d4e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: PRODUCTS_SOURCE
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'PRODUCTS_SOURCE') }} "PRODUCTS_SOURCE"
+            where PRICE > 0 AND STOCK_LEVEL >= 0 ;
+        name: STG_PRODUCTS_SOURCE
+        noLinkRefs: []
+  name: STG_PRODUCTS_SOURCE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
